@@ -50,10 +50,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-
-        picker = binding.imagePicker
-        apply = binding.apply
+        binding = DataBindingUtil.setContentView(this, R.layout.start_main)
 
         checkPermissions()
     }
