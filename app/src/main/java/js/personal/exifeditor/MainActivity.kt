@@ -27,17 +27,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: StartMainBinding
 
-    private lateinit var picker: Button
-    private lateinit var apply: Button
-
-    private lateinit var importName: String
-    private lateinit var importCreated: String
-    private lateinit var importModified: String
-    private lateinit var importResolution: String
-    private lateinit var exportModified: String
-
-    private lateinit var array: List<Uri>
-
     val permissions = listOf(
         Manifest.permission.WRITE_EXTERNAL_STORAGE,
         Manifest.permission.READ_EXTERNAL_STORAGE
