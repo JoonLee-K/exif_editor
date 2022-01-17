@@ -6,15 +6,12 @@ import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
-import gun0912.tedbottompicker.TedBottomPicker
-import js.personal.exifeditor.databinding.ActivityMainBinding
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.Paths
@@ -23,13 +20,12 @@ import java.nio.file.attribute.FileTime
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId
-import gun0912.tedbottompicker.TedBottomSheetDialogFragment
-import gun0912.tedbottompicker.TedBottomSheetDialogFragment.OnMultiImageSelectedListener
+import js.personal.exifeditor.databinding.StartMainBinding
 
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: StartMainBinding
 
     private lateinit var picker: Button
     private lateinit var apply: Button
@@ -49,7 +45,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         binding = DataBindingUtil.setContentView(this, R.layout.start_main)
 
         checkPermissions()
